@@ -18,6 +18,7 @@ public class SclipsePerspectiveFactory implements IPerspectiveFactory {
      */
     public SclipsePerspectiveFactory() {
         super();
+        
     }
 
     /* (non-Javadoc)
@@ -25,21 +26,18 @@ public class SclipsePerspectiveFactory implements IPerspectiveFactory {
      */
     public void createInitialLayout(IPageLayout layout) {
         String editorArea = layout.getEditorArea();
+       	IFolderLayout topLeft = layout.createFolder("topLeft", IPageLayout.LEFT, 0.25f,
+					editorArea);
+		topLeft.addView(IPageLayout.ID_RES_NAV);
+		
+		IFolderLayout bottomLeft = layout.createFolder("bottomLeft", IPageLayout.BOTTOM, 0.50f,
+					"topLeft");
 
-        layout.setEditorAreaVisible(true);
+		bottomLeft.addView(IPageLayout.ID_OUTLINE);
+					
 
-        IFolderLayout top =
-            layout.createFolder("top", IPageLayout.TOP, 1f, editorArea);  //$NON-NLS-1$
-      //  top.addView(IPageLayout.ID_EDITOR_AREA);
-       
-        IFolderLayout bottom = 
-            layout.createFolder("bottom", IPageLayout.BOTTOM, 0.3f, IPageLayout.ID_EDITOR_AREA);  //$NON-NLS-1$
-        bottom.addView(IDebugUIConstants.ID_CONSOLE_VIEW);
+     	layout.addView(IDebugUIConstants.ID_CONSOLE_VIEW, IPageLayout.BOTTOM, 0.66f, editorArea);
 
-        IFolderLayout left =
-            layout.createFolder("left", IPageLayout.LEFT, 0.7f, IPageLayout.ID_OUTLINE);    //$NON-NLS-1$
-        left.addView(IPageLayout.ID_NAVIGATE_ACTION_SET);
-        left.addView(IPageLayout.ID_OUTLINE);
         
 
                 

@@ -28,20 +28,12 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            name="Sample XML Editor"
+            name="Sclipse Editor"
+            extensions="sce"
             icon="icons/sample.gif"
-            extensions="xml"
             contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
-            class="sclipse.editors.XMLEditor"
-            id="sclipse.editors.XMLEditor">
-      </editor>
-      <editor
-            name="Sample Multi-page Editor"
-            icon="icons/sample.gif"
-            extensions="mpe"
-            contributorClass="sclipse.editors.MultiPageEditorContributor"
-            class="sclipse.editors.MultiPageEditor"
-            id="sclipse.editors.MultiPageEditor">
+            class="sclipse.editors.SclipseEditor"
+            id="sclipse.editors.SclipseEditor">
       </editor>
    </extension>
    <extension
@@ -168,9 +160,9 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            name="Sample Preferences"
-            class="sclipse.preferences.SamplePreferencePage"
-            id="sclipse.preferences.SamplePreferencePage">
+            name="Sclipse Preferences"
+            class="sclipse.preferences.SclipsePreferencePage"
+            id="sclipse.preferences.SclipsePreferencePage">
       </page>
    </extension>
    <extension

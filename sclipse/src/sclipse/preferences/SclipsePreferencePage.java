@@ -21,15 +21,15 @@ import org.eclipse.jface.preference.IPreferenceStore;
  */
 
 
-public class SamplePreferencePage
+public class SclipsePreferencePage
 	extends FieldEditorPreferencePage
 	implements IWorkbenchPreferencePage {
 	public static final String P_PATH = "pathPreference";
 	public static final String P_BOOLEAN = "booleanPreference";
 	public static final String P_CHOICE = "choicePreference";
-	public static final String P_STRING = "stringPreference";
+	public static final String P_INTERPRETER_LOCATION = "Scheme Interpreter";
 
-	public SamplePreferencePage() {
+	public SclipsePreferencePage() {
 		super(GRID);
 		setPreferenceStore(SclipsePlugin.getDefault().getPreferenceStore());
 		setDescription("A demonstration of a preference page implementation");
@@ -42,7 +42,7 @@ public class SamplePreferencePage
 		IPreferenceStore store = getPreferenceStore();
 		store.setDefault(P_BOOLEAN, true);
 		store.setDefault(P_CHOICE, "choice2");
-		store.setDefault(P_STRING, "Default value");
+		store.setDefault(P_INTERPRETER_LOCATION, "cmd");
 	}
 	
 /**
@@ -69,7 +69,7 @@ public class SamplePreferencePage
 				"C&hoice 2", "choice2" }
 		}, getFieldEditorParent()));
 		addField(
-			new StringFieldEditor(P_STRING, "A &text preference:", getFieldEditorParent()));
+			new StringFieldEditor(P_INTERPRETER_LOCATION, "Scheme Interpreter:", getFieldEditorParent()));
 	}
 	
 	public void init(IWorkbench workbench) {

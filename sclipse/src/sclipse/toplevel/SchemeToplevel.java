@@ -57,13 +57,6 @@ public class SchemeToplevel extends PlatformObject {
 		ILaunchConfigurationWorkingCopy launchConfig =
 			launchConfigurationType.newInstance(null, "Scheme Toplevel"); 
 					
-			//		DebugPlugin.getDefault()
-			//	.getLaunchManager().generateUniqueLaunchConfigurationNameFrom(
-			//		"Scheme Toplevel"));
-	
-		//launchConfig.setAttribute("sclipse.toplevel.SchemeToplevel", fileName);
-		
-	
 		DebugUITools.launch(launchConfig, ILaunchManager.RUN_MODE);
 
 		

@@ -1,5 +1,6 @@
 package sclipse.toplevel;
 
+
 /*
  * (c) Brent Fulgham <bfulgham@debian.org>, 2002
  * All Rights Reserved.
@@ -24,6 +25,9 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.model.IProcess;
 import org.eclipse.debug.core.model.ILaunchConfigurationDelegate;
 import org.eclipse.debug.core.DebugPlugin;
+import sclipse.preferences.*;
+
+import sclipse.*;
 
 
 /**
@@ -59,7 +63,7 @@ public class SchemeToplevelDelegate implements ILaunchConfigurationDelegate {
 	 *
 	 */
 	public SchemeToplevelDelegate() {
-		fSchemeRuntime = "gghgfjhjhf";
+		fSchemeRuntime = SclipsePlugin.getDefault().getPreferenceStore().getString(SclipsePreferencePage.P_INTERPRETER_LOCATION);
 	}
 
 	/**
