@@ -1,0 +1,21 @@
+# Automatically-generated dependency list:
+src/base_dati.o: \
+/home/progetti/magazzino/src/base_dati.h \
+/home/progetti/magazzino/src/lock.h \
+/home/progetti/magazzino/src/tipi.h 
+src/dati_disco.o: \
+/home/progetti/magazzino/src/dati_disco.h 
+src/dati_memoria.o: \
+/home/progetti/magazzino/src/dati_memoria.h \
+/home/progetti/magazzino/src/tree.h 
+src/lock.o: \
+/home/progetti/magazzino/src/lock.h 
+src/test.o: \
+/home/progetti/magazzino/src/dati_memoria.h \
+/home/progetti/magazzino/src/tree.h 
+src/test_disco.o: \
+/home/progetti/magazzino/src/dati_disco.h 
+src/test_lock.o: \
+/home/progetti/magazzino/src/lock.h 
+src/tree.o: \
+/home/progetti/magazzino/src/tree.h 

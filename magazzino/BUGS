@@ -1,0 +1,17 @@
+            *                                                 *
+            *       Quimera 2003, progetto: MAGAZZINO         *
+            *                                                 *
+
+BUGS
+
+    8 agosto 2003
+
+	Problema nella funzione add_elem della libreria libtree: penso
+che gli argomenti passati alla funzione di comparazione non siano
+corretti nel caso di un elemento formato da una strutura. Rivedere
+bene il codice. 
+
+
+    20 agosto 2003
+
+        Problema del malfunzioamento della libreria libtree corretto.
